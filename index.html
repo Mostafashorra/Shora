@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <script src='main.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="portfolio">
+
+        <ul id="ul">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="img">
+        <img src="man.png" alt="error">
+    </div>
+    <article id="Home">
+        <div class="id">
+            <p>Back-end/Front-end</p>
+            <h2> hello I'm Mostafa Shora </h2>
+            <h3>I am from Lebanon</h3>
+        </div>
+    </article>
+    <section id="About">
+        <div class="Front-end">
+            <img src="website-layout.png" alt="">
+            <h1>Front-end</h1>
+            <p>As a front-end developer, I transform design concepts into interactive, user-friendly web interfaces using modern technologies like HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="Back-end ">
+            <img src="back-end.png" alt="">
+            <h1>Back-end</h1>
+            <p>As a back-end developer, I specialize in PHP and MySQL, building and maintaining server-side logic, databases, and APIs to ensure smooth and efficient web application performance.</p>
+        </p>
+        </div>
+        <div class="databases">
+            <img src="database.png" alt="">
+            <h1>databases</h1>
+            <p>I design and manage databases to ensure data is stored efficiently and securely, optimizing queries and implementing best practices for data integrity and scalability.</p>
+        </div>
+    </section>
+    <a href="#Portfolio" ><button class="button" style="vertical-align:middle"><span>Portfolio</span></button></a>
+    <div id="Service">
+    </div>
+    <div id="Portfolio">
+        <img src="man.png" alt="error">
+        <p>
+            I am Mustafa Shura, a recent web development graduate from CIS Institute. Although I am at the beginning of my career and do not yet have many projects under my belt, I have a strong passion for developing myself and my skills in this field. I believe that hard work and perseverance are the keys to success, and I am always striving to gain more knowledge and experience to be able to offer my best. I aspire to build a strong professional future by continuously learning new technologies and tools, and by participating in web development projects that contribute to improving website quality and user experience."
+        </p>
+    </div>
+    <a href="#Contact"><button class="button1"> <span> Contact</span> </button></a>
+    <div id="Contact">
+        <div class="input">
+        <input type="text" placeholder="Name" id="Name">
+        <input type="text" placeholder="Phone Number..." id="Number">
+        </div>
+        <div class="input1">
+            <input type="email" placeholder="Email" id="Email">
+            <select class="select" id="F.B">
+                <option value="Front-end">Front-end</option>
+                <option value="Back-end">Back-end</option>
+            </select>
+           
+        </div>
+        <div class="input2">
+            <input type="text" placeholder="I thought of the project" id="massage">
+        </div>
+    </div>
+    <button class="button2" onclick="send()"><span>Send Me</span></button>
+   
+</body>
+<script>
+    function send() {
+        name = document.getElementById('Name').value;
+        number = document.getElementById('Number').value;
+        email = document.getElementById('Email').value;
+        select = document.getElementById('F.B').value;
+        mas = document.getElementById('massage').value;
+        var data = "Name : " + name +"\n"+'Number : '+ number+'\n'+'Email : '+email+'\n'+'select : '+select+'\n'+'project : '+mas;
+        var phoneNumber = '+96176016281';
+        var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(data);
+        window.open(url, '_blank');
+        
+    }
+</script>
+</html>
